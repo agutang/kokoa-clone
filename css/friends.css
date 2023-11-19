@@ -1,0 +1,43 @@
+.FriendsNamesDisplay {
+    width:100vw;
+    background-color: var(--light-gray);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:70px;
+    margin-bottom: 15px;
+}
+.FriendsNamesDisplay i{
+    color:var(--gray);
+    margin: 0 10px;
+}
+.FriendsNamesDisplay i:first-child {
+    font-size:32px;
+}
+.FriendsNamesDisplay i:last-child {
+    font-size:18px;
+}
+.splash {
+    display:flex;
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(219,255,255);
+    font-size:64px;
+    font-weight:bold;
+    animation: splashAnimation 1s linear forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes splashAnimation {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+        visibility: hidden;
+    }
+}
