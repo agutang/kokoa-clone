@@ -85,6 +85,7 @@ span {
     width:100vw;
     height:90px;
     background-color: white;
+    transition:all 2s ease-in-out;
 }
 .input-bar__plus {
     width:10%;
@@ -107,6 +108,7 @@ span {
     border-radius:35px;
     font-size:24px;
     padding: 0 24px;
+    transition:all 1s ease-in-out;
 }
 .input-bar__input .fa-smile {
     position:absolute;
@@ -125,7 +127,14 @@ span {
     top:13px;
     right:5vw;
 }
-
+.input-bar:focus-within {
+    background-color:rgb(170,190,200);
+}
+.input-bar:focus-within .fa-smile,
+.input-bar:focus-within button,
+.input-bar:focus-within .input-bar__plus {
+    animation: disappear 1s ease-in-out forwards;
+}
 @keyframes messageAppear {
     0% {
         opacity:0;
@@ -144,5 +153,13 @@ span {
     100% {
         opacity:1;
         transform:none;
+    }
+}
+@keyframes disappear {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
     }
 }
