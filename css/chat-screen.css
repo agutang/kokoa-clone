@@ -1,0 +1,148 @@
+body {
+    background-color: rgb(170,190,200);
+}
+span {
+    display:block;
+}
+.header-bar {
+    background-color: rgb(170,190,200);
+}
+.title-bar {
+    background-color: rgb(170,190,200);
+}
+.chat-screen {
+    width:90vw;
+}
+.chat-screen__timestamp {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: rgba(0,0,0,0.2);
+    color:white;
+    font-size:18px;
+    border-radius:16px;
+}
+.chat {
+    display:flex;
+    width:90vw;
+}
+.chat--message {
+    display:flex;
+    align-items:end;
+    width:90vw;
+    margin:10px 0 0 15px;
+}
+.chat--my-own .chat--message {
+    margin-top:6px;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    animation: messageAppear--r 0.2s linear forwards;
+}
+.chat--my-own .chat--message:first-child {
+    margin-top: 10px;
+}
+.chat--message span:first-child {
+    font-size:24px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+}
+.chat--my-own .chat--message span:first-child {
+    background-color:rgb(254,229,0);
+    border-top-left-radius: 23px;
+    border-top-right-radius: 0;
+}
+.chat--message span:nth-child(2) {
+    margin: 0 8px;
+}
+.chat--with-icon {
+    margin-top: 15px;
+    animation: messageAppear 0.2s linear forwards;
+}
+.chat--with-icon > img {
+    width:70px;
+    height:70px;
+    border-radius: 40%;
+}
+.chat--with-icon > div p {
+    font-size:24px;
+    opacity: 0.8;
+    margin-left:15px;
+}
+.chat__without-icon {
+    margin-top:6px;
+    padding-left:154px;
+    animation: messageAppear 0.2s linear forwards;
+}
+.input-bar {
+    display:flex;
+    position:fixed;
+    bottom:0px;
+    justify-content: space-between;
+    align-items: center;
+    width:100vw;
+    height:90px;
+    background-color: white;
+}
+.input-bar__plus {
+    width:10%;
+    font-size: 50px;
+    color: rgba(0,0,0,0.5);
+}
+.input-bar__plus .fa-plus-square {
+    margin-left: 3vw;
+}
+.input-bar__input {
+    position:relative;
+    width:90%;
+}
+.input-bar__input input {
+    box-sizing:border-box;
+    width:95%;
+    height:70px;
+    background-color: var(--light-gray);
+    border: 1px solid var(--gray);
+    border-radius:35px;
+    font-size:24px;
+    padding: 0 24px;
+}
+.input-bar__input .fa-smile {
+    position:absolute;
+    font-size:45px;
+    right:12vw;
+    top:19px;
+}
+.input-bar__input button {
+    font-size:24px;
+    width: 45px;
+    height: 45px;
+    border-radius:50%;
+    border: 1px solid rgb(204, 189, 0);
+    background-color: rgb(254,229,0);
+    position:absolute;
+    top:13px;
+    right:5vw;
+}
+
+@keyframes messageAppear {
+    0% {
+        opacity:0;
+        transform:translateX(-5vw);
+    }
+    100% {
+        opacity:1;
+        transform:none;
+    }
+}
+@keyframes messageAppear--r {
+    0% {
+        opacity:0;
+        transform:translateX(5vw);
+    }
+    100% {
+        opacity:1;
+        transform:none;
+    }
+}

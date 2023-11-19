@@ -1,0 +1,43 @@
+.icon-bar {
+    display:flex;
+    width:100vw;
+    flex-wrap:wrap;
+    margin-bottom:55px;
+}
+.icon-bar img {
+    width:90px;
+    height:90px;
+    border-radius:40%;
+}
+.icon-bar span {
+    font-size:22px;
+}
+.icon-bar__find {
+    width:90vw;
+}
+.icon-bar__find {
+    justify-content: space-between;
+}
+.icon-bar > div {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:180px;
+
+}
+.icon-bar__find > div {
+    width: 90px;
+}
+.icon-bar > div div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:90px;
+    height:90px;
+}
+.icon-bar > div span{
+    text-align: center;
+}
+.icon-bar i {
+    font-size:70px;
+}

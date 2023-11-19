@@ -1,0 +1,31 @@
+.header-bar {
+    background-color: white;
+    width:100vw;
+    height:40px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:22px;
+    position:fixed;
+}
+.header-bar__block {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:30%;
+}
+.header-bar__block i{
+    font-size:18px;
+    margin: 0 5px;
+}
+.header-bar__block:first-child {
+    justify-content: left;
+    margin-left: 10px;
+}
+.header-bar__block:last-child {
+    justify-content: right;
+    margin-right: 5px;
+}
+.header-bar__block:last-child i {
+    font-size:25px;
+}
